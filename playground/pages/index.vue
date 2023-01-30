@@ -1,0 +1,33 @@
+<template>
+  <div class="container">
+    <h1>🗓️ Nuxt Calendly</h1>
+    <p>Demo Playground</p>
+
+    <h2>Components</h2>
+    <ul>
+      <li>
+        <NuxtLink to="/inline-widget">
+          <span>Inline Widget</span>
+        </NuxtLink>
+      </li>
+
+      <li>
+        <NuxtLink to="/popup-button">
+          <span>Popup Button</span>
+        </NuxtLink>
+      </li>
+
+      <li>
+        <NuxtLink to="/popup-widget">
+          <span>Popup Widget</span>
+        </NuxtLink>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<style scoped>
+  h2 {
+    margin-top: 2rem;
+  }
+</style>

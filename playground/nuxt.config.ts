@@ -1,4 +1,5 @@
+import CalendlyModule from ".."
+
 export default defineNuxtConfig({
-  modules: ['../src/module'],
-  myModule: {}
+  modules: [CalendlyModule],
 })
