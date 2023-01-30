@@ -1,5 +1,36 @@
 # Changelog
 
+## v0.1.2
+
+
+### 🩹 Fixes
+
+  - Adding generated files to ignores (bcb7124)
+  - Remove unneeded import (4922c44)
+  - Dependencies and release command (19b79cd)
+  - Add `dev:generate` (1836f8c)
+  - Adding build config (4aa5f77)
+
+### 📖 Documentation
+
+  - Adding docs repo (d825931)
+  - Add playground link seperately, move ignore files (1f127c5)
+  - Move to seperate repo (c2b761f)
+  - Improve link (4f14f4f)
+
+### 🏡 Chore
+
+  - Cleanup (3fad548)
+  - **release:** V0.1.1 (765127c)
+  - **release:** V0.1.2 (aa86490)
+  - Add changelog for first version (8912c53)
+  - **release:** V0.1.1 (8ab0c1a)
+  - Added package.json info (7a20a7d)
+
+### ❤️  Contributors
+
+- Madebyfabian <beer.fabian@mail.de>
+
 ## v0.1.1
 
 
