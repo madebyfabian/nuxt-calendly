@@ -1,26 +1,18 @@
 <template>
   <!-- prettier-ignore -->
-  <div>
-    <button
-      v-bind="$attrs"
-      @click="onClick"
-    >
-      {{ props.text || 'Schedule time with me' }}
-    </button>
-    <PopupModal
-      v-bind="props"
-      :is-open="isOpen"
-      :root-element="props.rootElement"
-      @close="onClose"
-    />
-  </div>
+  <button
+    v-bind="$attrs"
+    @click="onClick"
+  >
+    {{ props.text || 'Schedule time with me' }}
+  </button>
+  <PopupModal
+    v-bind="props"
+    :is-open="isOpen"
+    :root-element="props.rootElement"
+    @close="onClose"
+  />
 </template>
-
-<script lang="ts">
-  export default {
-    inheritAttrs: false,
-  }
-</script>
 
 <script lang="ts" setup>
   import { ref } from "vue"

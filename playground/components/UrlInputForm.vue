@@ -27,22 +27,17 @@
   </form>
 </template>
 
-<script lang="ts">
-  export type State = "idle" | "shouldLoad"
-
-  //
-</script>
-
 <script lang="ts" setup>
+  import { UrlInputFormState } from "@/types";
   import { ref, watch, onMounted } from "vue"
 
   const isLoaded = ref(false)
   const url = ref("https://calendly.com/demo/30min")
-  const state = ref<State>("idle")
+  const state = ref<UrlInputFormState>("idle")
 
   const emit = defineEmits<{
     (e: "url", url: string): void
-    (e: "changeState", state: State): void
+    (e: "changeState", state: UrlInputFormState): void
   }>()
 
   watch(
@@ -53,7 +48,7 @@
     { immediate: true }
   )
 
-  const changeState = (state: State) => {
+  const changeState = (state: UrlInputFormState) => {
     emit("changeState", state)
     if (state === "idle") {
       isLoaded.value = false

@@ -27,12 +27,6 @@
   </Teleport>
 </template>
 
-<script lang="ts">
-  export default {
-    inheritAttrs: false,
-  }
-</script>
-
 <script lang="ts" setup>
   import { onMounted, computed } from "vue"
   import PopupModalContent from "../components/PopupModalContent.vue"
