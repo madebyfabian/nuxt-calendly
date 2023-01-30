@@ -7,16 +7,18 @@
 > [Calendly](https://www.calendly.com) integration for [Nuxt 3](https://nuxt.com). This package is currently under development, but you can already use it in your Nuxt 3 projects.
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
-- [🛝 &nbsp;Playground](https://nuxt-calendly.vercel.app)
-<!-- - [📖 &nbsp;Documentation](https://example.com) -->
+- [📖 &nbsp;Documentation](https://nuxt-calendly.vercel.app)
 
 ## Features
 
 <!-- Highlight some of the features your module provide here -->
 
-- 🧱 &nbsp;Pre-made components for [Inline Embed](https://help.calendly.com/hc/en-us/articles/223147027), [Popup widget](https://help.calendly.com/hc/en-us/articles/223147027), and [Pop-Up text](https://help.calendly.com/hc/en-us/articles/223147027)
+- 💪 Type safe integration of Calendly into your project
+- 🧱 &nbsp;Auto-loaded components for [Inline Embed](https://help.calendly.com/hc/en-us/articles/223147027), [Popup widget](https://help.calendly.com/hc/en-us/articles/223147027), and [Pop-Up text](https://help.calendly.com/hc/en-us/articles/223147027)
 - 🕹️ &nbsp;A `useCalendly()` composable to access all of calendly's [widget.js](https://assets.calendly.com/assets/external/widget.js) methods.
 - 🔥 &nbsp;A `useCalendlyEventListener()` composable to listen to the windows [`message`](https://developer.calendly.com/api-docs/ZG9jOjI3ODM2MTAz-notifying-the-parent-window) events.
+- 📦 All scripts, styles and assets are automatically injected into your project (no external scripts or stylesheets).
+- ⚛️ Inspired by [react-calendly](https://github.com/tcampb/react-calendly)
 
 ## Quick Setup
 
@@ -46,7 +48,7 @@ export default defineNuxtConfig({
 
 That's it! You can now use 🗓️ Nuxt Calendly in your Nuxt app ✨
 
-Check out the [Playground](https://nuxt-calendly.vercel.app) for a documentation, examples and a live demo.
+Check out the [Documentation](https://nuxt-calendly.vercel.app).
 
 ---
 
