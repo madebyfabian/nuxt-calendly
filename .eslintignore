@@ -1,4 +1,7 @@
 dist
 node_modules
-playground/public
+
+# Static files
+playground/public/nuxt-calendly
+test/fixtures/basic/public/nuxt-calendly
 src/runtime/assets
