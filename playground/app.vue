@@ -2,6 +2,12 @@
   <NuxtPage />
 </template>
 
+<script setup>
+  import { useCalendly } from "#imports"
+
+  const calendly = useCalendly()
+</script>
+
 <style>
   *,
   ::before,

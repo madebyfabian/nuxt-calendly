@@ -135,4 +135,6 @@ export type PopupModalOptions = PopupModalContentOptions & {
 
 export type EventType = "Inline" | "PopupWidget" | "PopupButton"
 
-export type CalendlyClient = {}
+export type CalendlyClient = {
+  initInlineWidget: (options: CalendlyInlineWidgetOptions) => void
+}
