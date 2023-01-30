@@ -13,9 +13,9 @@
 
 <!-- Highlight some of the features your module provide here -->
 
-- ⛰ &nbsp;Foo
-- 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
+- 🧱 &nbsp;Pre-made components for [Inline Embed](https://help.calendly.com/hc/en-us/articles/223147027), [Popup widget](https://help.calendly.com/hc/en-us/articles/223147027), and [Pop-Up text](https://help.calendly.com/hc/en-us/articles/223147027)
+- 🕹️ &nbsp;A `useCalendly()` composable to access all of calendly's [widget.js](https://assets.calendly.com/assets/external/widget.js) methods.
+- 🔥 &nbsp;A `useCalendlyEventListener()` composable to listen to the windows [`message`](https://developer.calendly.com/api-docs/ZG9jOjI3ODM2MTAz-notifying-the-parent-window) events.
 
 ## Quick Setup
 
@@ -37,10 +37,14 @@ npm install --save-dev nuxt-calendly
 ```js
 export default defineNuxtConfig({
   modules: ["nuxt-calendly"],
-});
+})
 ```
 
 That's it! You can now use 🗓️ Nuxt Calendly in your Nuxt app ✨
+
+Check out the [Playground](https://nuxt-calendly.vercel.app) for a documentation, examples and a live demo.
+
+---
 
 ## Development
 
