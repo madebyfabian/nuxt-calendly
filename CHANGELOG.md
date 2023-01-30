@@ -9,7 +9,7 @@
 
 ### ❤️  Contributors
 
-- Madebyfabian <beer.fabian@mail.de>
+- Madebyfabian <hello@madebyfabian.com>
 
 ## v0.1.3
 
@@ -130,4 +130,4 @@
 
 ### ❤️ Contributors
 
-- Madebyfabian <hello@madebyfabian>
+- Madebyfabian <hello@madebyfabian.com>
