@@ -32,8 +32,25 @@
         </NuxtLink>
       </li>
     </ul>
+
+    <h2><code>useCalendlyEventListener()</code> Composable</h2>
+    <ul>
+      <li>
+        <NuxtLink to="/use-calendly-event-listener">
+          <span><code>useCalendlyEventListener()</code></span>
+        </NuxtLink>
+      </li>
+    </ul>
   </div>
 </template>
+
+<script setup lang="ts">
+  import { useHead } from "#app"
+
+  useHead({
+    title: "Playground",
+  })
+</script>
 
 <style scoped>
   h2 {

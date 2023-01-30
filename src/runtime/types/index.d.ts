@@ -1,3 +1,4 @@
+// --- from https://github.com/tcampb/react-calendly ---
 type Optional<T extends object> = {
   [P in keyof T]?: T[P]
 }
@@ -23,13 +24,6 @@ export type Prefill = Optional<{
   }>
   date: Date
 }>
-
-export enum CalendlyEvent {
-  PROFILE_PAGE_VIEWED = "calendly.profile_page_viewed",
-  EVENT_TYPE_VIEWED = "calendly.event_type_viewed",
-  DATE_AND_TIME_SELECTED = "calendly.date_and_time_selected",
-  EVENT_SCHEDULED = "calendly.event_scheduled",
-}
 
 export type Utm = Optional<{
   utmCampaign: string
@@ -131,7 +125,51 @@ export type PopupModalOptions = PopupModalContentOptions & {
   rootElement: HTMLElement
 }
 
-// --- own ---
+export type DateAndTimeSelectedEvent = MessageEvent<{
+  event: CalendlyEvent.DATE_AND_TIME_SELECTED
+  payload: {}
+}>
+
+export type EventScheduledEvent = MessageEvent<{
+  event: CalendlyEvent.EVENT_SCHEDULED
+  payload: {
+    event: {
+      /**
+       * @description Canonical reference (unique identifier) to the event that was scheduled.
+       * @example https://calendly.com/api/v2/scheduled_events/AAAAAAAAAAAAAA
+       * @see {@link https://developer.calendly.com/docs/api-docs/reference/calendly-api/openapi.yaml/paths/~1scheduled_events~1%7Buuid%7D/get} for further information.
+       */
+      uri: string
+    }
+    invitee: {
+      /**
+       * @description Canonical reference (unique identifier) for the invitee who scheduled the event.
+       * @example https://calendly.com/api/v2/scheduled_events/AAAAAAAAAAAAAA/invitees/AAAAAAAAAAAAAA
+       * @see {@link https://developer.calendly.com/docs/api-docs/reference/calendly-api/openapi.yaml/paths/~1scheduled_events~1%7Bevent_uuid%7D~1invitees~1%7Binvitee_uuid%7D/get} for further information.
+       */
+      uri: string
+    }
+  }
+}>
+
+export type EventTypeViewedEvent = MessageEvent<{
+  event: CalendlyEvent.EVENT_TYPE_VIEWED
+  payload: {}
+}>
+
+export type ProfilePageViewedEvent = MessageEvent<{
+  event: CalendlyEvent.PROFILE_PAGE_VIEWED
+  payload: {}
+}>
+
+export type CalendlyEventHandlers = {
+  onDateAndTimeSelected?: (e: DateAndTimeSelectedEvent) => any
+  onEventScheduled?: (e: EventScheduledEvent) => any
+  onEventTypeViewed?: (e: EventTypeViewedEvent) => any
+  onProfilePageViewed?: (e: ProfilePageViewedEvent) => any
+}
+
+// --- custom ---
 
 export type EventType = "Inline" | "PopupWidget" | "PopupButton"
 
