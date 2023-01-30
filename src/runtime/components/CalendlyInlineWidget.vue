@@ -17,7 +17,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
   import { ref, computed } from "vue"
   import type { CalendlyInlineWidgetOptions } from "../types"
   import { formatCalendlyUrl } from "../utils"

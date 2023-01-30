@@ -25,7 +25,7 @@ useCalendlyEventListener({
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
   import { useCalendlyEventListener } from "#imports"
   import { useHead } from "#app"
 

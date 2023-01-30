@@ -33,7 +33,7 @@
   //
 </script>
 
-<script setup lang="ts">
+<script lang="ts" setup>
   import { ref, watch, onMounted } from "vue"
 
   const isLoaded = ref(false)

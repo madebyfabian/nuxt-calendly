@@ -68,7 +68,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
   import { useCalendly } from "#imports"
   import { ref } from "vue"
   const calendly = useCalendly()

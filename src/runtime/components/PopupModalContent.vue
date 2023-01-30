@@ -12,7 +12,7 @@
   />
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
   import { ref, computed } from "vue"
   import { formatCalendlyUrl } from "../utils"
   import type { PopupModalContentOptions } from "../types"

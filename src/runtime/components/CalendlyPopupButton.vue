@@ -22,7 +22,7 @@
   }
 </script>
 
-<script setup lang="ts">
+<script lang="ts" setup>
   import { ref } from "vue"
   import type { CalendlyPopupButtonOptions } from "../types"
   import PopupModal from "./PopupModal.vue"

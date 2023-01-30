@@ -33,7 +33,7 @@
   }
 </script>
 
-<script setup lang="ts">
+<script lang="ts" setup>
   import { onMounted, computed } from "vue"
   import PopupModalContent from "../components/PopupModalContent.vue"
   import type { PopupModalOptions, PopupModalContentOptions } from "../types"

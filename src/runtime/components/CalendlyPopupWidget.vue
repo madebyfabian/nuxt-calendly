@@ -20,7 +20,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
   import { computed, ref } from "vue"
   import type { CalendlyPopupWidgetOptions } from "../types"
   import PopupModal from "./PopupModal.vue"
