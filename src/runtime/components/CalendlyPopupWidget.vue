@@ -27,7 +27,7 @@
 
   const props = defineProps<{
     url: CalendlyPopupWidgetOptions["url"]
-    rootElement: CalendlyPopupWidgetOptions["rootElement"]
+    rootElement: Exclude<CalendlyPopupWidgetOptions["rootElement"], undefined>
     text?: CalendlyPopupWidgetOptions["text"]
     color?: CalendlyPopupWidgetOptions["color"]
     textColor?: CalendlyPopupWidgetOptions["textColor"]

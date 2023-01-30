@@ -2,7 +2,7 @@
   <!-- prettier-ignore -->
   <div
     class="calendly-inline-widget"
-    style="min-width: 320px; height: 920px;"
+    style="min-width: 320px; height: 630px;"
   >
     <LoadingSpinner v-if="isLoading" />
     <iframe

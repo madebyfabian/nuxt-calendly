@@ -21,6 +21,13 @@ export interface ModuleOptions {
   loadWidgetCSS?: boolean
 
   /**
+   * Loads the required JS for Calendly, but only if you use the `useCalendly` composable.
+   * @default true
+   * @description Disable if you already load https://assets.calendly.com/assets/external/widget.js by yourself, or you want to load a custom JS.
+   */
+  loadWidgetJS?: boolean
+
+  /**
    * Loads a required SVG Asset for Calendly.
    * @default true
    * @description Disable if you already load https://assets.calendly.com/assets/external/close-icon.svg by yourself, or you want to load a custom SVG.
@@ -40,6 +47,7 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     isEnabled: true,
     loadWidgetCSS: true,
+    loadWidgetJS: true,
     loadWidgetCloseIconSvg: true,
   },
   setup(options, nuxt) {
@@ -90,17 +98,12 @@ export default defineNuxtModule<ModuleOptions>({
       options.references.push({ path: resolver.resolve(nuxt.options.buildDir, "types/supabase.d.ts") })
     })
 
-    const addSvgFile = async () => {
-      // If user disabled the svg loading, we don't need to do anything.
-      if (!options.loadWidgetCloseIconSvg) {
-        return
-      }
-
+    const addAsset = async ({ sourceFile, targetPath }: { sourceFile: string; targetPath: string }) => {
       // Read file from runtime dir
-      const file = await fsp.readFile(join(runtimeDir, "/assets/external/close-icon.svg"), "utf-8")
+      const file = await fsp.readFile(join(runtimeDir, sourceFile), "utf-8")
 
       // Write file to public dir of nuxt project
-      const newFilePath = join(nuxt.options.rootDir, "/public/", "nuxt-calendly/close-icon.svg")
+      const newFilePath = join(nuxt.options.rootDir, "/public/", targetPath)
       const newDirPath = dirname(newFilePath)
       await fsp.mkdir(newDirPath, { recursive: true })
       await fsp.writeFile(newFilePath, file)
@@ -108,7 +111,12 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Nuxt 3 and Bridge - inject script on runtime
     nuxt.hook("nitro:config", async () => {
-      await addSvgFile()
+      if (options.loadWidgetCloseIconSvg) {
+        addAsset({ sourceFile: "/assets/external/close-icon.svg", targetPath: "/nuxt-calendly/close-icon.svg" })
+      }
+      if (options.loadWidgetJS) {
+        addAsset({ sourceFile: "/assets/external/widget.mjs", targetPath: "/nuxt-calendly/widget.js" })
+      }
     })
 
     nuxt.options.build.transpile.push(runtimeDir)

@@ -108,7 +108,7 @@ export type CalendlyPopupButtonOptions = OptionsBase & {
 }
 
 export type CalendlyPopupWidgetOptions = OptionsBase & {
-  rootElement: HTMLElement
+  rootElement?: HTMLElement
   text?: string
   color?: string
   textColor?: string
@@ -136,5 +136,10 @@ export type PopupModalOptions = PopupModalContentOptions & {
 export type EventType = "Inline" | "PopupWidget" | "PopupButton"
 
 export type CalendlyClient = {
-  initInlineWidget: (options: CalendlyInlineWidgetOptions) => void
+  closePopupWidget: () => Promise<void>
+  destroyBadgeWidget: () => Promise<void>
+  initBadgeWidget: (options: CalendlyPopupWidgetOptions) => Promise<void>
+  initPopupWidget: (options: PopupModalContentOptions) => Promise<void>
+  showPopupWidget: (url: CalendlyPopupWidgetOptions["url"]) => Promise<void>
+  initInlineWidget: (options?: Partial<CalendlyInlineWidgetOptions>) => Promise<void>
 }

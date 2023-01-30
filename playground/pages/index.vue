@@ -23,6 +23,15 @@
         </NuxtLink>
       </li>
     </ul>
+
+    <h2><code>useCalendly()</code> Composable</h2>
+    <ul>
+      <li>
+        <NuxtLink to="/use-calendly">
+          <span><code>useCalendly()</code></span>
+        </NuxtLink>
+      </li>
+    </ul>
   </div>
 </template>
 

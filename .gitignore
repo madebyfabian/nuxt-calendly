@@ -54,3 +54,6 @@ coverage
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# generated
+playground/public/nuxt-calendly

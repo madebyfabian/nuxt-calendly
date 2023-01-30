@@ -2,12 +2,6 @@
   <NuxtPage />
 </template>
 
-<script setup>
-  import { useCalendly } from "#imports"
-
-  const calendly = useCalendly()
-</script>
-
 <style>
   *,
   ::before,
@@ -21,13 +15,20 @@
   }
 
   .container {
-    max-width: 960px;
+    max-width: 768px;
     padding: 2rem 1.5rem;
     margin: 0 auto;
   }
 
   input {
     display: block;
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 0.5rem;
     margin: 1rem 0;
   }
 </style>

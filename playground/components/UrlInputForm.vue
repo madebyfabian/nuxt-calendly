@@ -1,12 +1,11 @@
 <template>
   <!-- prettier-ignore -->
   <form @submit.prevent="() => changeState('shouldLoad')">
-    <label>
-      Input a Calendly URL (e.g. `https://calendly.com/demo/30min`)
-      <input
-        v-model="url"
-        type="url"
-      ></label>
+    <p>Input a Calendly URL (e.g. <code>https://calendly.com/demo/30min</code>)</p>
+    <input
+      v-model="url"
+      type="url"
+    >
 
     <div class="buttons">
       <button
@@ -14,7 +13,9 @@
         :disabled="!url || state === 'shouldLoad'"
         @click="() => changeState('shouldLoad')"
       >
-        Load
+        <slot name="primaryButton">
+          Load
+        </slot>
       </button>
       <button
         type="button"
@@ -36,7 +37,7 @@
   import { ref, watch, onMounted } from "vue"
 
   const isLoaded = ref(false)
-  const url = ref("")
+  const url = ref("https://calendly.com/demo/30min")
   const state = ref<State>("idle")
 
   const emit = defineEmits<{
@@ -44,9 +45,13 @@
     (e: "changeState", state: State): void
   }>()
 
-  watch(url, () => {
-    emit("url", url.value)
-  })
+  watch(
+    url,
+    () => {
+      emit("url", url.value)
+    },
+    { immediate: true }
+  )
 
   const changeState = (state: State) => {
     emit("changeState", state)
@@ -59,15 +64,3 @@
     changeState("idle")
   })
 </script>
-
-<style scoped>
-  .buttons {
-    display: flex;
-    gap: 0.5rem;
-    margin: 1rem 0;
-  }
-
-  input {
-    width: 100%;
-  }
-</style>
