@@ -6,7 +6,7 @@
 
 > [Calendly](https://www.calendly.com) integration for [Nuxt 3](https://nuxt.com). This package is currently under development, but you can already use it in your Nuxt 3 projects.
 
-- [✨ &nbsp;Release Notes](/CHANGELOG.md)
+- [✨ &nbsp;Release Notes](https://github.com/madebyfabian/nuxt-calendly/blob/main/CHANGELOG.md)
 - [📖 &nbsp;Documentation](https://nuxt-calendly.vercel.app)
 - [🛝 &nbsp;Playground](https://nuxt-calendly-playground.vercel.app/)
 - [📦 &nbsp;NPM](https://www.npmjs.com/package/nuxt-calendly)
