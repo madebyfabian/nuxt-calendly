@@ -1,2 +1,4 @@
 dist
 node_modules
+playground/public
+src/runtime/assets
