@@ -1,13 +1,13 @@
 {
-	"semi": false,
-	"trailingComma": "es5",
-	"singleQuote": false,
-	"jsxSingleQuote": true,
-	"quoteProps": "preserve",
-	"tabWidth": 2,
-	"useTabs": false,
-	"arrowParens": "avoid",
-	"bracketSameLine": true,
-	"printWidth": 120,
-	"vueIndentScriptAndStyle": true
+  "semi": false,
+  "trailingComma": "es5",
+  "singleQuote": false,
+  "jsxSingleQuote": true,
+  "quoteProps": "preserve",
+  "tabWidth": 2,
+  "useTabs": false,
+  "arrowParens": "avoid",
+  "bracketSameLine": true,
+  "printWidth": 120,
+  "vueIndentScriptAndStyle": true
 }
