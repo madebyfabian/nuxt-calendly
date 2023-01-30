@@ -4,6 +4,19 @@
   "description": "🗓️ Calendly integration for Nuxt 3",
   "license": "MIT",
   "type": "module",
+  "homepage": "https://nuxt-calendly.vercel.app",
+  "bugs": {
+    "url": "https://github.com/madebyfabian/nuxt-calendly/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madebyfabian/nuxt-calendly"
+  },
+  "contributors": [
+    {
+      "name": "Fabian B. (@madebyfabian)"
+    }
+  ],
   "exports": {
     ".": {
       "types": "./dist/types.d.ts",
