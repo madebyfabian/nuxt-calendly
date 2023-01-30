@@ -13,12 +13,12 @@
 
 <!-- Highlight some of the features your module provide here -->
 
-- 💪 Type safe integration of Calendly into your project
+- 💪 &nbsp;Type safe integration of Calendly into your project
 - 🧱 &nbsp;Auto-loaded components for [Inline Embed](https://help.calendly.com/hc/en-us/articles/223147027), [Popup widget](https://help.calendly.com/hc/en-us/articles/223147027), and [Pop-Up text](https://help.calendly.com/hc/en-us/articles/223147027)
 - 🕹️ &nbsp;A `useCalendly()` composable to access all of calendly's [widget.js](https://assets.calendly.com/assets/external/widget.js) methods.
 - 🔥 &nbsp;A `useCalendlyEventListener()` composable to listen to the windows [`message`](https://developer.calendly.com/api-docs/ZG9jOjI3ODM2MTAz-notifying-the-parent-window) events.
-- 📦 All scripts, styles and assets are automatically injected into your project (no external scripts or stylesheets).
-- ⚛️ Inspired by [react-calendly](https://github.com/tcampb/react-calendly)
+- 📦 &nbsp;All scripts, styles and assets are automatically injected into your project (no external scripts or stylesheets).
+- ⚛️ &nbsp;Inspired by [react-calendly](https://github.com/tcampb/react-calendly)
 
 ## Quick Setup
 
