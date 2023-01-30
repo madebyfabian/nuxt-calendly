@@ -1,5 +1,20 @@
 # Changelog
 
+## v0.1.5
+
+
+### 🩹 Fixes
+
+  - Remove non-setup scripts  to fix`[@vue/compiler-sfc]` error (d4d4b50)
+
+### 🏡 Chore
+
+  - Change email in changelog (d530dfc)
+
+### ❤️  Contributors
+
+- Madebyfabian <beer.fabian@mail.de>
+
 ## v0.1.4
 
 
