@@ -1,12 +1,13 @@
-# 🗓️ Nuxt Calendly
+# 🗓️ Nuxt Calendly (⚠️ WIP)
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 
-> [Calendly](https://www.calendly.com) integration for [Nuxt 3](https://nuxt.com)
+> [Calendly](https://www.calendly.com) integration for [Nuxt 3](https://nuxt.com). This package is currently under development, but you can already use it in your Nuxt 3 projects.
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
+- [🛝 &nbsp;Playground](https://nuxt-calendly.vercel.app)
 <!-- - [📖 &nbsp;Documentation](https://example.com) -->
 
 ## Features
@@ -37,6 +38,9 @@ npm install --save-dev nuxt-calendly
 ```js
 export default defineNuxtConfig({
   modules: ["nuxt-calendly"],
+
+  // entirely optional
+  calendly: {},
 })
 ```
 
