@@ -13,7 +13,7 @@
 
 ### ❤️  Contributors
 
-- Madebyfabian <beer.fabian@mail.de>
+- Madebyfabian <hello@madebyfabian.com>
 
 ## v0.1.4
 
