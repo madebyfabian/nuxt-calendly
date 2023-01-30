@@ -24,6 +24,7 @@
   import { computed, ref } from "vue"
   import type { CalendlyPopupWidgetOptions } from "../types"
   import PopupModal from "./PopupModal.vue"
+  import { config } from "../../config"
 
   const props = defineProps<{
     url: CalendlyPopupWidgetOptions["url"]
@@ -58,7 +59,7 @@
   }
 
   const style = computed(() => ({
-    background: props.color || "#00a2ff",
-    color: props.textColor || "#ffffff",
+    background: props.color || config.defaults.widgetBackgroundColor,
+    color: props.textColor || config.defaults.widgetTextColor,
   }))
 </script>

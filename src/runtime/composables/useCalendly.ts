@@ -1,5 +1,6 @@
 import type { CalendlyClient, CalendlyPopupWidgetOptions } from "../types"
 import { useRuntimeConfig } from "#imports"
+import { config } from "../../config"
 
 export const useCalendly = (): CalendlyClient => {
   const runtimeConfig = useRuntimeConfig()
@@ -52,8 +53,8 @@ export const useCalendly = (): CalendlyClient => {
     const calendly = await getCalendly()
     const fullOptions: Parameters<CalendlyClient["initBadgeWidget"]>["0"] = {
       ...options,
-      color: options.color || "#0069ff",
-      textColor: options.textColor || "#ffffff",
+      color: options.color || config.defaults.widgetBackgroundColor,
+      textColor: options.textColor || config.defaults.widgetTextColor,
       branding: options.branding !== false,
     }
     calendly?.initBadgeWidget(fullOptions)
