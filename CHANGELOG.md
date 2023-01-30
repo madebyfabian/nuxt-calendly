@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.1.1
+
+
+### 🩹 Fixes
+
+  - Adding generated files to ignores (bcb7124)
+  - Remove unneeded import (4922c44)
+  - Dependencies and release command (19b79cd)
+
+### 🏡 Chore
+
+  - Cleanup (3fad548)
+  - **release:** V0.1.1 (765127c)
+  - **release:** V0.1.2 (aa86490)
+  - Add changelog for first version (8912c53)
+
+### ❤️  Contributors
+
+- Madebyfabian <beer.fabian@mail.de>
+
 ## v0.1.0
 
 ### 🚀 Enhancements
