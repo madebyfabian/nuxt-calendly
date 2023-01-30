@@ -1,4 +1,4 @@
-import { defineNuxtModule, addPlugin, createResolver, addComponent } from "@nuxt/kit"
+import { defineNuxtModule, createResolver, addComponent } from "@nuxt/kit"
 import { fileURLToPath } from "url"
 import { defu } from "defu"
 import { promises as fsp } from "fs"
