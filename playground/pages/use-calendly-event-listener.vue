@@ -5,15 +5,13 @@
 
     <h1><code>useCalendlyEventListener() Composable</code></h1>
 
-    <p>The <code>useCalendlyEventListener()</code> is loaded like this:</p>
+    <p>The <code>useCalendlyEventListener()</code> Composable is loaded like this:</p>
 
     <pre>
-onMounted(() => {
-  useCalendlyEventListener({
-    onDateAndTimeSelected: event => {
-      console.log("onDateAndTimeSelected", event)
-    },
-  })
+useCalendlyEventListener({
+  onDateAndTimeSelected: event => {
+    console.log("onDateAndTimeSelected", event)
+  },
 })
     </pre>
 
@@ -30,14 +28,11 @@ onMounted(() => {
 <script setup lang="ts">
   import { useCalendlyEventListener } from "#imports"
   import { useHead } from "#app"
-  import { onMounted } from "vue"
 
-  onMounted(() => {
-    useCalendlyEventListener({
-      onDateAndTimeSelected: event => {
-        console.log("onDateAndTimeSelected", event)
-      },
-    })
+  useCalendlyEventListener({
+    onDateAndTimeSelected: event => {
+      console.log("onDateAndTimeSelected", event)
+    },
   })
 
   useHead({

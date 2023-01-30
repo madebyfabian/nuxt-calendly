@@ -39,7 +39,7 @@
         :disabled="!url"
         @click="handleClosePopupWidget"
       >
-        Fire <code>showPopupWidget() + closePopupWidget() after 10s</code>
+        Fire <code>showPopupWidget() + closePopupWidget() after 5s</code>
       </button>
 
       <button
@@ -49,8 +49,6 @@
       >
         Fire <code>destroyBadgeWidget()</code>
       </button>
-
-      
 
       <button
         type="button"
@@ -80,7 +78,6 @@
   const url = ref("https://calendly.com/demo/30min")
 
   const handleInitBadgeWidget = () => {
-    if (!rootElement.value) return
     calendly.initBadgeWidget({
       url: url.value,
       text: "Schedule time with me",
@@ -102,7 +99,7 @@
     calendly.showPopupWidget(url.value)
     setTimeout(() => {
       calendly.closePopupWidget()
-    }, 10000)
+    }, 5000)
   }
 
   const handleDestroyBadgeWidget = () => {
