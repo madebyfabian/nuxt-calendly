@@ -1,6 +1,6 @@
 {
   "name": "nuxt-calendly",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "🗓️ Calendly integration for Nuxt 3",
   "license": "MIT",
   "type": "module",
