@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.1.4
+
+
+### 🩹 Fixes
+
+  - Wip: change order of `<script>` props, attempt to fix `[@vue/compiler-sfc]` error (5036508)
+
+### ❤️  Contributors
+
+- Madebyfabian <beer.fabian@mail.de>
+
 ## v0.1.3
 
 
