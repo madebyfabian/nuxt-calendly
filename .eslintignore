@@ -3,5 +3,6 @@ node_modules
 
 # Static files
 playground/public/nuxt-calendly
+playground/public/_nuxt/nuxt-calendly
 test/fixtures/basic/public/nuxt-calendly
 src/runtime/assets
