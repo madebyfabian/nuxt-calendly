@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.1.7
+
+
+### 🩹 Fixes
+
+  - Use different paths for `nuxt generate` and `nuxt build` (d192e5b)
+  - Ignorefile add (1be7de6)
+
+### ❤️  Contributors
+
+- Madebyfabian <hello@madebyfabian.com>
+
 ## v0.1.6
 
 
