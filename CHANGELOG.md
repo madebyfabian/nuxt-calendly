@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.1.6
+
+
+### 🩹 Fixes
+
+  - Change email in changelog (93d98dc)
+  - Use static build dir instead of nuxt config (8a9728b)
+  - Improve types, remove compiler warning (39adce1)
+  - Improve generated path for `nuxt generate`. The svg file is now inlined (you can delete the generated `close-icon.svg`) (237247b)
+
+### ❤️  Contributors
+
+- Madebyfabian <hello@madebyfabian.com>
+
 ## v0.1.5
 
 
