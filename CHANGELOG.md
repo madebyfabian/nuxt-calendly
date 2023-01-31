@@ -1,5 +1,22 @@
 # Changelog
 
+## v0.1.8
+
+
+### 🩹 Fixes
+
+  - Always use dynamic path (a78c846)
+  - Attempt to fix vercel prod path issues (8ac784d)
+  - Removed `loadWidgetJS` option and load script from calendly directly due to vercel issues (20722b3)
+
+### 🏡 Chore
+
+  - Remove debug (e3c5cf6)
+
+### ❤️  Contributors
+
+- Madebyfabian <hello@madebyfabian.com>
+
 ## v0.1.7
 
 
