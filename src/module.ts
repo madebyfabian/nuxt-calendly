@@ -1,8 +1,6 @@
 import { defineNuxtModule, createResolver, addComponent } from "@nuxt/kit"
 import { fileURLToPath } from "url"
 import { defu } from "defu"
-import { promises as fsp } from "fs"
-import { join, dirname } from "path"
 
 // Module options TypeScript inteface definition
 export interface ModuleOptions {
