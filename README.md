@@ -20,7 +20,6 @@
 - 🕹️ &nbsp;A `useCalendly()` composable to access all of calendly's [widget.js](https://assets.calendly.com/assets/external/widget.js) methods.
 - 🔥 &nbsp;A `useCalendlyEventListener()` composable to listen to the windows [`message`](https://developer.calendly.com/api-docs/ZG9jOjI3ODM2MTAz-notifying-the-parent-window) events.
 - 🛝 &nbsp;Visit the [Playground](https://nuxt-calendly-playground.vercel.app/) to try out all the functionalities of the module.
-- 📦 &nbsp;All scripts, styles and assets are automatically injected into your project (no external scripts or stylesheets).
 - ⚛️ &nbsp;Inspired by [react-calendly](https://github.com/tcampb/react-calendly)
 
 ## Quick Setup

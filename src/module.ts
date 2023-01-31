@@ -14,21 +14,14 @@ export interface ModuleOptions {
   isEnabled?: boolean
 
   /**
-   * Loads the required CSS for Calendly.
+   * Loads the required CSS for Calendly directly into your app. Saves a HTTP Request.
    * @default true
    * @description Disable if you already load https://assets.calendly.com/assets/external/widget.css by yourself, or you want to load a custom CSS.
    */
   loadWidgetCSS?: boolean
 
   /**
-   * Loads the required JS for Calendly, but only if you use the `useCalendly` composable.
-   * @default true
-   * @description Disable if you already load https://assets.calendly.com/assets/external/widget.js by yourself, or you want to load a custom JS.
-   */
-  loadWidgetJS?: boolean
-
-  /**
-   * Loads a required SVG Asset for Calendly.
+   * Loads a required SVG Asset for Calendly directly into your app. Saves a HTTP Request.
    * @default true
    * @description Disable if you already load https://assets.calendly.com/assets/external/close-icon.svg by yourself, or you want to load a custom SVG.
    */
@@ -47,7 +40,6 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     isEnabled: true,
     loadWidgetCSS: true,
-    loadWidgetJS: true,
     loadWidgetCloseIconSvg: true,
   },
   setup(options, nuxt) {
@@ -96,34 +88,6 @@ export default defineNuxtModule<ModuleOptions>({
 
     nuxt.hook("prepare:types", options => {
       options.references.push({ path: resolver.resolve(nuxt.options.buildDir, "types/supabase.d.ts") })
-    })
-
-    const getJSAssetPath = ({ targetPath }: { targetPath: string }) => {
-      // Write file to public dir of nuxt project
-      const publicFolder = process.env.NODE_ENV == "development" && nuxt.options._generate ? nuxt.options.dir.public : ""
-      const newFilePathBase = join(nuxt.options.rootDir, publicFolder)
-      const newFilePath = join(newFilePathBase, targetPath)
-      const newDirPath = dirname(newFilePath)
-      return { newDirPath, newFilePath }
-    }
-
-    /**
-     * only works for JS files.
-     * Since nuxt strips out everything else when `nuxt generate`, but not `nuxt build`.
-     **/
-    const addJSAsset = async ({ sourceFile, targetPath }: { sourceFile: string; targetPath: string }) => {
-      // Read file from runtime dir
-      const file = await fsp.readFile(join(runtimeDir, sourceFile), "utf-8")
-      const { newDirPath, newFilePath } = getJSAssetPath({ targetPath })
-      await fsp.mkdir(newDirPath, { recursive: true })
-      await fsp.writeFile(newFilePath, file)
-    }
-
-    // Nuxt 3 and Bridge - inject script on runtime
-    nuxt.hook("nitro:build:before", async () => {
-      if (options.loadWidgetJS) {
-        addJSAsset({ sourceFile: "/assets/external/widget.mjs", targetPath: "/_nuxt-calendly/widget.js" })
-      }
     })
 
     nuxt.options.build.transpile.push(runtimeDir)
