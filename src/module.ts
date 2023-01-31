@@ -103,7 +103,7 @@ export default defineNuxtModule<ModuleOptions>({
       const file = await fsp.readFile(join(runtimeDir, sourceFile), "utf-8")
 
       // Write file to public dir of nuxt project
-      const newFilePath = join(nuxt.options.rootDir, "/public/", targetPath)
+      const newFilePath = join("/_nuxt/public/", targetPath)
       const newDirPath = dirname(newFilePath)
       await fsp.mkdir(newDirPath, { recursive: true })
       await fsp.writeFile(newFilePath, file)
