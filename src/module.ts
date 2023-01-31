@@ -122,7 +122,7 @@ export default defineNuxtModule<ModuleOptions>({
     // Nuxt 3 and Bridge - inject script on runtime
     nuxt.hook("nitro:build:before", async () => {
       if (options.loadWidgetJS) {
-        addJSAsset({ sourceFile: "/assets/external/widget.mjs", targetPath: "/nuxt-calendly/widget.js" })
+        addJSAsset({ sourceFile: "/assets/external/widget.mjs", targetPath: "/_nuxt-calendly/widget.js" })
       }
     })
 

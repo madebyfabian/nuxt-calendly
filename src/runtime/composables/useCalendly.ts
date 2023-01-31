@@ -1,10 +1,16 @@
 import type { CalendlyClient, CalendlyPopupWidgetOptions } from "../types"
 import { useRuntimeConfig } from "#imports"
 
+const pathJoin = (...parts: string[]) => {
+  const separator = '/';
+  const replace = new RegExp(separator + '{1,}', 'g');
+  return parts.join('/').replace(replace, separator);
+}
+
 export const useCalendly = (): CalendlyClient => {
   const runtimeConfig = useRuntimeConfig()
-  const buildAssetsDir = runtimeConfig.app.buildAssetsDir
-  const scriptUrl = buildAssetsDir + "nuxt-calendly/widget.js"
+  const buildAssetsDir = runtimeConfig.app.baseURL
+  const scriptUrl = pathJoin(buildAssetsDir + "/_nuxt-calendly/widget.js")
 
   const attemptToLoadWidgetScript = (): Promise<CalendlyClient | undefined> =>
     new Promise(resolve => {
