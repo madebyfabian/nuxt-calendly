@@ -98,6 +98,20 @@ export default defineNuxtModule<ModuleOptions>({
       options.references.push({ path: resolver.resolve(nuxt.options.buildDir, "types/supabase.d.ts") })
     })
 
+    const getJSAssetPath = ({ targetPath }: { targetPath: string }) => {
+      // Depending on if you use `nuxt generate` or `nuxt build`, the `public` dir is different.
+      let newFilePathBasePublic = nuxt.options.dir.public
+      if (nuxt.options._generate) {
+        newFilePathBasePublic = join(newFilePathBasePublic, '_nuxt')
+      }
+  
+      // Write file to public dir of nuxt project
+      const newFilePathBase = join(nuxt.options.srcDir, newFilePathBasePublic)
+      const newFilePath = join(newFilePathBase, targetPath)
+      const newDirPath = dirname(newFilePath)
+      return { newDirPath, newFilePath }
+    }
+
     /**
      * only works for JS files.
      * Since nuxt strips out everything else when `nuxt generate`, but not `nuxt build`.
@@ -105,11 +119,7 @@ export default defineNuxtModule<ModuleOptions>({
     const addJSAsset = async ({ sourceFile, targetPath }: { sourceFile: string; targetPath: string }) => {
       // Read file from runtime dir
       const file = await fsp.readFile(join(runtimeDir, sourceFile), "utf-8")
-
-      // Write file to public dir of nuxt project
-      const newFilePathBase = join(nuxt.options.srcDir, nuxt.options.dir.public)
-      const newFilePath = join(newFilePathBase, targetPath)
-      const newDirPath = dirname(newFilePath)
+      const { newDirPath, newFilePath } = getJSAssetPath({ targetPath })
       await fsp.mkdir(newDirPath, { recursive: true })
       await fsp.writeFile(newFilePath, file)
     }

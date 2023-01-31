@@ -56,5 +56,5 @@ Temporary Items
 .apdisk
 
 # generated
-playground/public/nuxt-calendly
+playground/public/_nuxt/nuxt-calendly
 test/fixtures/basic/public/nuxt-calendly
