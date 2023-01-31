@@ -98,24 +98,26 @@ export default defineNuxtModule<ModuleOptions>({
       options.references.push({ path: resolver.resolve(nuxt.options.buildDir, "types/supabase.d.ts") })
     })
 
-    const addAsset = async ({ sourceFile, targetPath }: { sourceFile: string; targetPath: string }) => {
+    /**
+     * only works for JS files.
+     * Since nuxt strips out everything else when `nuxt generate`, but not `nuxt build`.
+     **/
+    const addJSAsset = async ({ sourceFile, targetPath }: { sourceFile: string; targetPath: string }) => {
       // Read file from runtime dir
       const file = await fsp.readFile(join(runtimeDir, sourceFile), "utf-8")
 
       // Write file to public dir of nuxt project
-      const newFilePath = join("/_nuxt/public/", targetPath)
+      const newFilePathBase = join(nuxt.options.srcDir, nuxt.options.dir.public)
+      const newFilePath = join(newFilePathBase, targetPath)
       const newDirPath = dirname(newFilePath)
       await fsp.mkdir(newDirPath, { recursive: true })
       await fsp.writeFile(newFilePath, file)
     }
 
     // Nuxt 3 and Bridge - inject script on runtime
-    nuxt.hook("nitro:config", async () => {
-      if (options.loadWidgetCloseIconSvg) {
-        addAsset({ sourceFile: "/assets/external/close-icon.svg", targetPath: "/nuxt-calendly/close-icon.svg" })
-      }
+    nuxt.hook("nitro:build:before", async () => {
       if (options.loadWidgetJS) {
-        addAsset({ sourceFile: "/assets/external/widget.mjs", targetPath: "/nuxt-calendly/widget.js" })
+        addJSAsset({ sourceFile: "/assets/external/widget.mjs", targetPath: "/nuxt-calendly/widget.js" })
       }
     })
 

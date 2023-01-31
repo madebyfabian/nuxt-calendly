@@ -2,7 +2,7 @@
  * @source https://assets.calendly.com/assets/external/widget.css
  * @date 2023-30-01
  * @modified 
- * - URL of svg at `.calendly-overlay .calendly-popup-close`
+ * - URL of svg at `.calendly-overlay .calendly-popup-close` to base64
  * - max-height at `.calendly-overlay .calendly-popup`
  * - remove `# sourceMappingURL=widget.css.map` from the end
  */
@@ -91,7 +91,7 @@
   width: 19px;
   height: 19px;
   cursor: pointer;
-  background: url(/nuxt-calendly/close-icon.svg) no-repeat;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMiI+PHBhdGggZD0iTTExLjE5MiA5LjA3MWw3Ljc3OS03Ljc3OGExLjUgMS41IDAgMCAxIDIuMTIgMi4xMjFsLTcuNzc3IDcuNzc4IDcuNzc4IDcuNzc5YTEuNSAxLjUgMCAxIDEtMi4xMjEgMi4xMmwtNy43NzktNy43NzctNy43NzggNy43NzhhMS41IDEuNSAwIDEgMS0yLjEyMS0yLjEyMWw3Ljc3OC03Ljc3OS03Ljc3OC03Ljc3OGExLjUgMS41IDAgMCAxIDIuMTIxLTIuMTIxbDcuNzc4IDcuNzc4eiIgZmlsbD0iI0ZGRiIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9zdmc+') no-repeat;
   background-size: contain;
 }
 @media (max-width: 975px) {
