@@ -31,23 +31,30 @@
   import { onMounted, computed } from "vue"
   import PopupModalContent from "../components/PopupModalContent.vue"
   import type { PopupModalOptions, PopupModalContentOptions } from "../types"
+  
+  interface BaseProps {}
 
-  const props = defineProps<{
-    // content
+  interface ContentProps extends BaseProps {
     url: PopupModalContentOptions["url"]
     prefill?: PopupModalContentOptions["prefill"]
     utm?: PopupModalContentOptions["utm"]
     pageSettings?: PopupModalContentOptions["pageSettings"]
     iframeTitle?: PopupModalContentOptions["iframeTitle"]
+  }
 
-    // main
+  interface Props extends ContentProps {
     isOpen: PopupModalOptions["isOpen"]
     rootElement: PopupModalOptions["rootElement"]
-  }>()
+  }
+
+  const props = defineProps<Props>()
 
   const childProps = computed(() => {
-    const { isOpen, rootElement, ...rest } = props
-    return rest
+    type Clone = ContentProps & Partial<Props>
+    const copy: Clone = JSON.parse(JSON.stringify(props))
+    delete copy.isOpen
+    delete copy.rootElement
+    return copy as Omit<Clone, 'isOpen' | 'rootElement'>
   })
 
   const emit = defineEmits<{
