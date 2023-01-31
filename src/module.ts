@@ -100,7 +100,8 @@ export default defineNuxtModule<ModuleOptions>({
 
     const getJSAssetPath = ({ targetPath }: { targetPath: string }) => {
       // Write file to public dir of nuxt project
-      const newFilePathBase = join(nuxt.options.rootDir, nuxt.options.dir.public)
+      const publicFolder = process.env.NODE_ENV == "development" && nuxt.options._generate ? nuxt.options.dir.public : ""
+      const newFilePathBase = join(nuxt.options.rootDir, publicFolder)
       const newFilePath = join(newFilePathBase, targetPath)
       const newDirPath = dirname(newFilePath)
       return { newDirPath, newFilePath }
