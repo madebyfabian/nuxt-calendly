@@ -103,7 +103,6 @@ export default defineNuxtModule<ModuleOptions>({
       const newFilePathBase = join(nuxt.options.rootDir, nuxt.options.dir.public)
       const newFilePath = join(newFilePathBase, targetPath)
       const newDirPath = dirname(newFilePath)
-      console.log({public: nuxt.options.dir.public, rootDir: nuxt.options.rootDir, newFilePathBase, newFilePath, newDirPath});
       return { newDirPath, newFilePath }
     }
 
