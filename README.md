@@ -1,10 +1,10 @@
-# 🗓️ Nuxt Calendly (⚠️ WIP)
+# 🗓️ Nuxt Calendly 
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 
-> [Calendly](https://www.calendly.com) integration for [Nuxt 3](https://nuxt.com). This package is currently under development, but you can already use it in your Nuxt 3 projects.
+> [Calendly](https://www.calendly.com) integration for [Nuxt 3](https://nuxt.com). 
 
 - [✨ &nbsp;Release Notes](https://github.com/madebyfabian/nuxt-calendly/blob/main/CHANGELOG.md)
 - [📖 &nbsp;Documentation](https://nuxt-calendly.vercel.app)
@@ -16,9 +16,9 @@
 <!-- Highlight some of the features your module provide here -->
 
 - 💪 &nbsp;Type safe integration of Calendly into your project
-- 🧱 &nbsp;Auto-loaded components for [Inline Embed](https://help.calendly.com/hc/en-us/articles/223147027), [Popup widget](https://help.calendly.com/hc/en-us/articles/223147027), and [Pop-Up text](https://help.calendly.com/hc/en-us/articles/223147027)
-- 🕹️ &nbsp;A `useCalendly()` composable to access all of calendly's [widget.js](https://assets.calendly.com/assets/external/widget.js) methods.
-- 🔥 &nbsp;A `useCalendlyEventListener()` composable to listen to the windows [`message`](https://developer.calendly.com/api-docs/ZG9jOjI3ODM2MTAz-notifying-the-parent-window) events.
+- 🧱 &nbsp;Auto-loaded components for [Inline Widget](https://nuxt-calendly.vercel.app/components/inline-widget), [Popup widget](https://nuxt-calendly.vercel.app/components/popup-widget), and [Pop-Up text](https://nuxt-calendly.vercel.app/popup-text)
+- 🕹️ &nbsp;A [`useCalendly()`](https://nuxt-calendly.vercel.app/composables/use-calendly) composable to access all of calendly's [widget.js](https://assets.calendly.com/assets/external/widget.js) methods.
+- 🔥 &nbsp;A [`useCalendlyEventListener()`](https://nuxt-calendly.vercel.app/composables/use-calendly-event-listener) composable to listen to the windows [`message`](https://developer.calendly.com/api-docs/ZG9jOjI3ODM2MTAz-notifying-the-parent-window) events.ZG9jOjI3ODM2MTAz-notifying-the-parent-window) events.
 - 🛝 &nbsp;Visit the [Playground](https://nuxt-calendly-playground.vercel.app/) to try out all the functionalities of the module.
 - ⚛️ &nbsp;Inspired by [react-calendly](https://github.com/tcampb/react-calendly)
 
