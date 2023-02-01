@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.1.10
+
+
+### 🩹 Fixes
+
+  - Don't add supabase types to nuxt.d.ts (5142317)
+
+### 📖 Documentation
+
+  - Readme update url (8d12047)
+
+### ❤️  Contributors
+
+- Daniel Roe <daniel@roe.dev>
+- Madebyfabian <hello@madebyfabian.com>
+
 ## v0.1.9
 
 
