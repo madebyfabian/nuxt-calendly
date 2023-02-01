@@ -7,15 +7,15 @@
       type="url"
     >
     <div
-      class="buttons"
-      style="flex-direction: column"
+      class="buttons buttons-grid"
+      style="flex-direction: column; display: grid; grid-template-columns: repeat(3, 1fr);"
     >
       <button
         type="button"
         :disabled="!url"
         @click="handleInitBadgeWidget"
       >
-        Fire <code>handleInitBadgeWidget()</code>
+        <code>initBadgeWidget()</code>
       </button>
 
       <button
@@ -23,7 +23,15 @@
         :disabled="!url"
         @click="handleInitPopupWidget"
       >
-        Fire <code>initPopupWidget()</code>
+        <code>initPopupWidget()</code>
+      </button>
+
+      <button
+        type="button"
+        :disabled="!url"
+        @click="handleInitInlineWidget"
+      >
+        <code>initInlineWidget()</code>
       </button>
 
       <button
@@ -31,7 +39,7 @@
         :disabled="!url"
         @click="handleShowPopupWidget"
       >
-        Fire <code>showPopupWidget()</code>
+        <code>showPopupWidget()</code>
       </button>
 
       <button
@@ -48,14 +56,6 @@
         @click="handleDestroyBadgeWidget"
       >
         Fire <code>destroyBadgeWidget()</code>
-      </button>
-
-      <button
-        type="button"
-        :disabled="!url"
-        @click="handleInitInlineWidget"
-      >
-        Fire <code>initInlineWidget() (places it in a <code>.calendly-inline-widget</code> element)</code>
       </button>
     </div>
 
@@ -111,7 +111,13 @@
 
   const handleInitInlineWidget = async () => {
     initInlineWidgetFired.value = true
-    await new Promise((resolve) => setTimeout(resolve, 100))
+    await new Promise((resolve) => setTimeout(resolve, 300))
     calendly.initInlineWidget()
   }
 </script>
+
+<style scoped>
+  .buttons-grid button {
+    height: 56px;
+  }
+</style>
