@@ -84,10 +84,6 @@ export default defineNuxtModule<ModuleOptions>({
       })
     })
 
-    nuxt.hook("prepare:types", options => {
-      options.references.push({ path: resolver.resolve(nuxt.options.buildDir, "types/supabase.d.ts") })
-    })
-
     nuxt.options.build.transpile.push(runtimeDir)
   },
 })
