@@ -1,5 +1,29 @@
 # Changelog
 
+## v0.1.9
+
+
+### 🩹 Fixes
+
+  - Use correct types for `CalendlyInlineWidgetOptions` (d9cf00f)
+  - Remove uneeded `Partial<>` (0ced639)
+
+### 📖 Documentation
+
+  - Updated readme according nuxt-calendly-docs (e5e3979)
+  - Improve playground usability (4b23b77)
+  - Fix namings and urls (41fb543)
+  - Updated wording (d284aa9)
+
+### 🏡 Chore
+
+  - Remove unneeded imports (c054e93)
+  - Fix docs playground example loaded twice (286dd0d)
+
+### ❤️  Contributors
+
+- Madebyfabian <hello@madebyfabian.com>
+
 ## v0.1.8
 
 
