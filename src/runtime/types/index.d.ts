@@ -179,5 +179,5 @@ export type CalendlyClient = {
   initBadgeWidget: (options: CalendlyPopupWidgetOptions) => Promise<void>
   initPopupWidget: (options: PopupModalContentOptions) => Promise<void>
   showPopupWidget: (url: CalendlyPopupWidgetOptions["url"]) => Promise<void>
-  initInlineWidget: (options?: Partial<CalendlyInlineWidgetOptions>) => Promise<void>
+  initInlineWidget: (options?: CalendlyInlineWidgetOptions) => Promise<void>
 }
