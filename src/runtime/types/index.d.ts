@@ -76,7 +76,7 @@ export type PageSettings = Optional<{
   hideGdprBanner: boolean
 }>
 
-type OptionsBase = {
+type PopupOptionsBase = {
   /**
    * Calendly URL (Required)
    * @description The URL of your Calendly event page.
@@ -85,14 +85,14 @@ type OptionsBase = {
   url: string
 }
 
-export type CalendlyInlineWidgetOptions = OptionsBase & {
+export type CalendlyInlineWidgetOptions = {
   prefill?: Prefill
   utm?: Utm
   pageSettings?: PageSettings
   iframeTitle?: IframeTitle
 }
 
-export type CalendlyPopupButtonOptions = OptionsBase & {
+export type CalendlyPopupButtonOptions = PopupOptionsBase & {
   rootElement: HTMLElement
   text?: string
   prefill?: Prefill
@@ -101,7 +101,7 @@ export type CalendlyPopupButtonOptions = OptionsBase & {
   iframeTitle?: IframeTitle
 }
 
-export type CalendlyPopupWidgetOptions = OptionsBase & {
+export type CalendlyPopupWidgetOptions = PopupOptionsBase & {
   rootElement?: HTMLElement
   text?: string
   color?: string
@@ -113,7 +113,7 @@ export type CalendlyPopupWidgetOptions = OptionsBase & {
   iframeTitle?: IframeTitle
 }
 
-export type PopupModalContentOptions = OptionsBase & {
+export type PopupModalContentOptions = PopupOptionsBase & {
   prefill?: Prefill
   utm?: Utm
   pageSettings?: PageSettings
