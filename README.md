@@ -16,7 +16,7 @@
 <!-- Highlight some of the features your module provide here -->
 
 - 💪 &nbsp;Type safe integration of Calendly into your project
-- 🧱 &nbsp;Auto-loaded components for [Inline Widget](https://nuxt-calendly.vercel.app/components/inline-widget), [Popup widget](https://nuxt-calendly.vercel.app/components/popup-widget), and [Pop-Up text](https://nuxt-calendly.vercel.app/popup-text)
+- 🧱 &nbsp;Auto-loaded components for [Inline Widget](https://nuxt-calendly.vercel.app/components/inline-widget), [Popup Widget](https://nuxt-calendly.vercel.app/components/popup-widget), and [Popup Button](https://nuxt-calendly.vercel.app/popup-button)
 - 🕹️ &nbsp;A [`useCalendly()`](https://nuxt-calendly.vercel.app/composables/use-calendly) composable to access all of calendly's [widget.js](https://assets.calendly.com/assets/external/widget.js) methods.
 - 🔥 &nbsp;A [`useCalendlyEventListener()`](https://nuxt-calendly.vercel.app/composables/use-calendly-event-listener) composable to listen to the windows [`message`](https://developer.calendly.com/api-docs/ZG9jOjI3ODM2MTAz-notifying-the-parent-window) events.ZG9jOjI3ODM2MTAz-notifying-the-parent-window) events.
 - 🛝 &nbsp;Visit the [Playground](https://nuxt-calendly-playground.vercel.app/) to try out all the functionalities of the module.
