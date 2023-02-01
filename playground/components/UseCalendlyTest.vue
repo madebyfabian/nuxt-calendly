@@ -60,7 +60,9 @@
     </div>
 
     <div ref="rootElement" />
+
     <div
+      v-if="initInlineWidgetFired"
       class="calendly-inline-widget"
       :data-url="url"
       style="min-width:320px; height: 630px; background: #f7f7f8"
@@ -76,6 +78,7 @@
   const rootElement = ref<HTMLElement>()
 
   const url = ref("https://calendly.com/demo/30min")
+  const initInlineWidgetFired = ref(false)
 
   const handleInitBadgeWidget = () => {
     calendly.initBadgeWidget({
@@ -106,7 +109,9 @@
     calendly.destroyBadgeWidget()
   }
 
-  const handleInitInlineWidget = () => {
+  const handleInitInlineWidget = async () => {
+    initInlineWidgetFired.value = true
+    await new Promise((resolve) => setTimeout(resolve, 100))
     calendly.initInlineWidget()
   }
 </script>
