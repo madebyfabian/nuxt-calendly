@@ -62,7 +62,7 @@
     <div ref="rootElement" />
 
     <div
-      v-if="initInlineWidgetFired"
+      v-show="initInlineWidgetFired"
       class="calendly-inline-widget"
       :data-url="url"
       style="min-width:320px; height: 630px; background: #f7f7f8"
@@ -111,7 +111,7 @@
 
   const handleInitInlineWidget = async () => {
     initInlineWidgetFired.value = true
-    await new Promise((resolve) => setTimeout(resolve, 300))
+    await new Promise((resolve) => setTimeout(resolve, 10))
     calendly.initInlineWidget()
   }
 </script>
