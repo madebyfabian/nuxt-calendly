@@ -29,15 +29,16 @@
   "files": [
     "dist"
   ],
+  "packageManager": "pnpm@7.3.0",
   "scripts": {
     "prepack": "nuxt-module-build",
-    "start": "npm run dev",
-    "dev": "npm run dev:prepare && nuxi dev playground",
+    "start": "pnpm dev",
+    "dev": "pnpm dev:prepare && nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:generate": "nuxi generate playground",
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
     "dev:preview": "nuxi preview playground",
-    "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "release": "pnpm lint && pnpm test && pnpm prepack && changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch"
