@@ -29,7 +29,7 @@ export const useCalendly = (): CalendlyClient => {
     })
 
   const getCalendly = async () => {
-    if (!process.client) return
+    if ('client' in process && !process.client) return
     const calendly = await attemptToLoadWidgetScript()
     if (!calendly) return
     return calendly
