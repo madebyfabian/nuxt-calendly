@@ -58,26 +58,26 @@ Check out the [Documentation](https://nuxt-calendly.vercel.app).
 
 ```bash
 # Install dependencies
-pnpm install
+npm install
 
 # Generate type stubs
-pnpm dev:prepare
+npm run dev:prepare
 
 # Develop with the playground
-pnpm dev
+npm run dev
 
 # Build the playground
-pnpm dev:build
+npm run dev:build
 
 # Run ESLint
-pnpm lint
+npm run lint
 
 # Run Vitest
-pnpm test
-pnpm test:watch
+npm run test
+npm run test:watch
 
 # Release new version
-pnpm release
+npm run release
 ```
 
 <!-- Badges -->
