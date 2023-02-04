@@ -1,21 +1,5 @@
 # Changelog
 
-## v0.1.11
-
-
-### 🩹 Fixes
-
-  - Type improvements (b1ba0f9)
-  - Switch to pnpm (9827e0a)
-
-### 📖 Documentation
-
-  - Use `v-show` instead of `v-if` (4fc3b2f)
-
-### ❤️  Contributors
-
-- Madebyfabian <hello@madebyfabian.com>
-
 ## v0.1.10
 
 
