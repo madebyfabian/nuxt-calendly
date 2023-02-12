@@ -1,5 +1,22 @@
 # Changelog
 
+## v0.1.12
+
+
+### 🩹 Fixes
+
+  - Switch to pnpm" (daa3563)
+  - Type improvements" (37888e2)
+  - Use `typeof window` instead of `process` (ebcf5a6)
+
+### 🏡 Chore
+
+  - **release:** V0.1.11" (3199679)
+
+### ❤️  Contributors
+
+- Madebyfabian <hello@madebyfabian.com>
+
 ## v0.1.11
 
 
