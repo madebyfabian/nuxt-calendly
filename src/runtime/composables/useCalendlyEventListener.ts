@@ -19,7 +19,7 @@ export default function useCalendlyEventListener(eventHandlers: CalendlyEventHan
   watchEffect(() => {
     const { onDateAndTimeSelected, onEventScheduled, onEventTypeViewed, onProfilePageViewed } = eventHandlers || {}
 
-    if (!process.client) return
+    if (typeof window !== undefined) return
 
     const onMessage = (e: MessageEvent) => {
       const eventName = e.data.event
