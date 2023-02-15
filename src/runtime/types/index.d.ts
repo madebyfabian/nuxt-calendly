@@ -85,15 +85,7 @@ type PopupOptionsBase = {
   url: string
 }
 
-type InlineOptionsBase = {
-  /**
-   * Calendly URL (Required)
-   * @description The URL of your Calendly event page.
-   */
-  url: string
-}
-
-export type CalendlyInlineWidgetOptions = InlineOptionsBase & {
+export type CalendlyInlineWidgetOptions = {
   prefill?: Prefill
   utm?: Utm
   pageSettings?: PageSettings
