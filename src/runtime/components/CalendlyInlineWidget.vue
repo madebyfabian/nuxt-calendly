@@ -24,7 +24,7 @@
   import LoadingSpinner from "./LoadingSpinner.vue"
 
   const props = defineProps<{
-    url: CalendlyInlineWidgetOptions["url"]
+    url: string
     prefill?: CalendlyInlineWidgetOptions["prefill"]
     utm?: CalendlyInlineWidgetOptions["utm"]
     pageSettings?: CalendlyInlineWidgetOptions["pageSettings"]
