@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.1.14
+
+
+### 🩹 Fixes
+
+  - Added url to base options for inline widget (bd3fa27)
+  - Removed inline base types and changed type for CalendlyInlineWidget url prop (d495e31)
+
+### ❤️  Contributors
+
+- Brinken90
+
 ## v0.1.13
 
 
