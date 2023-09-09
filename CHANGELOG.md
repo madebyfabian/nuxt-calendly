@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.1.15
+
+
+### 🩹 Fixes
+
+  - Remove unnecessary throw, which causes whole application to break in edge cases (thanks lorenzo!) (1d281dd)
+
+### ❤️  Contributors
+
+- Madebyfabian <hello@madebyfabian.com>
+
 ## v0.1.14
 
 
