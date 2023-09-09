@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { onMounted, computed } from "vue"
+  import { computed } from "vue"
   import PopupModalContent from "../components/PopupModalContent.vue"
   import type { PopupModalOptions, PopupModalContentOptions } from "../types"
   
@@ -60,10 +60,4 @@
   const emit = defineEmits<{
     (e: "close", event: Event): void
   }>()
-
-  onMounted(() => {
-    if (!props.rootElement) {
-      throw new Error("[nuxt-calendly]: PopupModal rootElement property cannot be undefined")
-    }
-  })
 </script>
