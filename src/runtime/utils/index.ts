@@ -41,7 +41,7 @@ export const formatCalendlyUrl = ({
   const { backgroundColor, hideEventTypeDetails, hideLandingPageDetails, primaryColor, textColor, hideGdprBanner } =
     sanitizedPageSettings
 
-  const { customAnswers, date, email, firstName, guests, lastName, location, name } = prefill
+  const { customAnswers, date, email, firstName, guests, lastName, smsReminderNumber, location, name } = prefill
 
   const { utmCampaign, utmContent, utmMedium, utmSource, utmTerm, salesforce_uuid } = utm
 
@@ -62,6 +62,7 @@ export const formatCalendlyUrl = ({
     location ? `location=${encodeURIComponent(location)}` : null,
     firstName ? `first_name=${encodeURIComponent(firstName)}` : null,
     lastName ? `last_name=${encodeURIComponent(lastName)}` : null,
+    smsReminderNumber ? `phone_number=${encodeURIComponent(smsReminderNumber)}` : null,
     guests ? `guests=${guests.map(encodeURIComponent).join(",")}` : null,
     email ? `email=${encodeURIComponent(email)}` : null,
     date && date instanceof Date ? `date=${formatDate(date)}` : null,

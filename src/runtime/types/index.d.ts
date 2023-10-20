@@ -8,6 +8,7 @@ export type Prefill = Optional<{
   email: string
   firstName: string
   lastName: string
+  smsReminderNumber: string
   location: string
   guests: string[]
   customAnswers: Optional<{
