@@ -23,7 +23,7 @@
 
 <script lang="ts" setup>
   import { ref } from "vue"
-  import { useHead } from "#app"
+  import { useSeoMeta } from "#imports"
   import { CalendlyPopupWidget } from "#components"
 
   const rootElement = ref<HTMLElement>()
@@ -31,7 +31,7 @@
   const url = ref("")
   const state = ref<"idle" | "shouldLoad">("idle")
 
-  useHead({
+  useSeoMeta({
     title: "Popup Widget",
   })
 </script>

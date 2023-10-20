@@ -26,8 +26,8 @@ useCalendlyEventListener({
 </template>
 
 <script lang="ts" setup>
-  import { useCalendlyEventListener } from "#imports"
-  import { useHead } from "#app"
+  import { useCalendlyEventListener, useSeoMeta } from "#imports"
+
 
   useCalendlyEventListener({
     onDateAndTimeSelected: event => {
@@ -35,7 +35,8 @@ useCalendlyEventListener({
     },
   })
 
-  useHead({
+
+  useSeoMeta({
     title: "useCalendlyEventListener() Composable",
   })
 </script>

@@ -45,9 +45,9 @@
 </template>
 
 <script lang="ts" setup>
-  import { useHead } from "#app"
+  import { useSeoMeta } from "#imports"
 
-  useHead({
+  useSeoMeta({
     title: "Playground",
   })
 </script>

@@ -19,14 +19,14 @@
 
 <script lang="ts" setup>
   import { ref } from "vue"
-  import { useHead } from "#app"
+  import { useSeoMeta } from "#imports"
   import { CalendlyInlineWidget, BackLink } from "#components"
-  import type { State } from "../components/UrlInputForm.vue"
+  import type { UrlInputFormState } from "@/types";
 
-  const state = ref<State>("idle")
+  const state = ref<UrlInputFormState>("idle")
   const url = ref("")
 
-  useHead({
+  useSeoMeta({
     title: "Inline Widget",
   })
 </script>

@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { UrlInputFormState } from "@/types";
+  import type { UrlInputFormState } from "@/types";
   import { ref, watch, onMounted } from "vue"
 
   const isLoaded = ref(false)
