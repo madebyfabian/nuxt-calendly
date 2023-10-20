@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.1.17
+
+
+### 🩹 Fixes
+
+  - Build (001816e)
+  - Missing package upgrade, imports updated (b711790)
+
+### ❤️  Contributors
+
+- Madebyfabian <hello@madebyfabian.com>
+
 ## v0.1.16
 
 
