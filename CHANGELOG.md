@@ -1,5 +1,20 @@
 # Changelog
 
+## v0.1.16
+
+
+### 🩹 Fixes
+
+  - Added phone number to prefill (041e1f5)
+
+### 🏡 Chore
+
+  - Upgrade packages (9c145fc)
+
+### ❤️  Contributors
+
+- Madebyfabian <hello@madebyfabian.com>
+
 ## v0.1.15
 
 
