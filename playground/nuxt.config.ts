@@ -2,6 +2,9 @@ import CalendlyModule from ".."
 
 export default defineNuxtConfig({
   modules: [CalendlyModule],
+  experimental: {
+    payloadExtraction: false,
+  },
   app: {
     head: {
       titleTemplate: "%s · Nuxt Calendly",
