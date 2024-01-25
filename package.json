@@ -30,12 +30,13 @@
     "dist"
   ],
   "scripts": {
-    "prepack": "nuxt-module-build",
+    "prepack": "nuxt-module-build build",
     "start": "npm run dev",
+    "build": "npm run dev:build",
     "dev": "npm run dev:prepare && nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:generate": "nuxi generate playground",
-    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
     "dev:preview": "nuxi preview playground",
     "typecheck": "nuxi typecheck playground",
     "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
@@ -44,17 +45,17 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.8.0",
-    "defu": "^6.1.2"
+    "@nuxt/kit": "^3.9.3",
+    "defu": "^6.1.4"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "^0.1.1",
-    "@nuxt/module-builder": "^0.2.1",
-    "@nuxt/schema": "^3.8.0",
-    "@nuxt/test-utils": "^3.8.0",
-    "changelogen": "^0.4.1",
-    "eslint": "^8.32.0",
-    "nuxt": "^3.8.0",
-    "vitest": "^0.33.0"
+    "@nuxt/eslint-config": "^0.2.0",
+    "@nuxt/module-builder": "^0.5.5",
+    "@nuxt/schema": "^3.9.3",
+    "@nuxt/test-utils": "^3.10.0",
+    "changelogen": "^0.5.5",
+    "eslint": "^8.56.0",
+    "nuxt": "^3.9.3",
+    "vitest": "^1.2.1"
   }
 }
