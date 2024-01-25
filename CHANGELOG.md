@@ -1,5 +1,23 @@
 # Changelog
 
+## v0.1.18
+
+[compare changes](https://github.com/madebyfabian/nuxt-calendly/compare/v0.1.17...v0.1.18)
+
+### 🩹 Fixes
+
+- Replace `typeof window` with `import.meta.client` ([e62673a](https://github.com/madebyfabian/nuxt-calendly/commit/e62673a))
+
+### 🏡 Chore
+
+- Test bundler module resolution ([e2c921e](https://github.com/madebyfabian/nuxt-calendly/commit/e2c921e))
+- Package upgrades ([8403338](https://github.com/madebyfabian/nuxt-calendly/commit/8403338))
+
+### ❤️ Contributors
+
+- Madebyfabian <hello@madebyfabian.com>
+- Daniel Roe <daniel@roe.dev>
+
 ## v0.1.17
 
 
