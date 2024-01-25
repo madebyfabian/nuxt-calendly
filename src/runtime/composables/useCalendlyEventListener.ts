@@ -33,12 +33,12 @@ export default function useCalendlyEventListener(eventHandlers: CalendlyEventHan
   }
 
   onMounted(() => {
-    if (typeof window === undefined) return
+    if (!import.meta.client) return
     window.addEventListener(EVENT_NAME, onMessage)
   })
 
   onUnmounted(() => {
-    if (typeof window === undefined) return
+    if (!import.meta.client) return
     window.removeEventListener(EVENT_NAME, onMessage)
   })
 }
