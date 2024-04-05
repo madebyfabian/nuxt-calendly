@@ -27,14 +27,7 @@
 1. Add `nuxt-calendly` dependency to your project
 
 ```bash
-# Using pnpm
-pnpm add -D nuxt-calendly
-
-# Using yarn
-yarn add --dev nuxt-calendly
-
-# Using npm
-npm install --save-dev nuxt-calendly
+npx nuxi@latest module add calendly
 ```
 
 2. Add `nuxt-calendly` to the `modules` section of `nuxt.config.ts`
