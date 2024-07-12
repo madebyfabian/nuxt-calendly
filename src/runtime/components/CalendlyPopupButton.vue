@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { ref, defineProps, defineEmits, defineExpose } from "vue"
+  import { ref } from "vue"
   import type { CalendlyPopupButtonOptions } from "../types"
   import PopupModal from "./PopupModal.vue"
 
