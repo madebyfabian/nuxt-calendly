@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.1.19
+
+[compare changes](https://github.com/madebyfabian/nuxt-calendly/compare/v0.1.18...v0.1.19)
+
+### 📖 Documentation
+
+- Use new `nuxi module add` command in installation ([34dd01b](https://github.com/madebyfabian/nuxt-calendly/commit/34dd01b))
+
+### 🏡 Chore
+
+- Indicate compatibility with new v4 major` ([3cfb538](https://github.com/madebyfabian/nuxt-calendly/commit/3cfb538))
+
+### ❤️ Contributors
+
+- Daniel Roe ([@danielroe](http://github.com/danielroe))
+
 ## v0.1.18
 
 [compare changes](https://github.com/madebyfabian/nuxt-calendly/compare/v0.1.17...v0.1.18)
