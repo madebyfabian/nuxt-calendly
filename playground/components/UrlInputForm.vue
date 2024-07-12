@@ -28,8 +28,8 @@
 </template>
 
 <script lang="ts" setup>
-  import type { UrlInputFormState } from "@/types";
   import { ref, watch, onMounted } from "vue"
+  import type { UrlInputFormState } from "@/types";
 
   const isLoaded = ref(false)
   const url = ref("https://calendly.com/demo/30min")

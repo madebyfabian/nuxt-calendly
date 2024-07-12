@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { computed } from "vue"
+  import { computed  } from "vue"
   import PopupModalContent from "../components/PopupModalContent.vue"
   import type { PopupModalOptions, PopupModalContentOptions } from "../types"
   
