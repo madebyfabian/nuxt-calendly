@@ -1,5 +1,22 @@
 # Changelog
 
+## v0.1.20
+
+[compare changes](https://github.com/madebyfabian/nuxt-calendly/compare/v0.1.19...v0.1.20)
+
+### 🩹 Fixes
+
+- Add `defineExpose` for `isOpen` state to modal components ([6aa4378](https://github.com/madebyfabian/nuxt-calendly/commit/6aa4378))
+- Remove explicit compiler macro imports ([520a37b](https://github.com/madebyfabian/nuxt-calendly/commit/520a37b))
+
+### 🏡 Chore
+
+- Remove more explicit compiler macro imports ([02aff62](https://github.com/madebyfabian/nuxt-calendly/commit/02aff62))
+
+### ❤️ Contributors
+
+- Madebyfabian <hello@madebyfabian.com>
+
 ## v0.1.19
 
 [compare changes](https://github.com/madebyfabian/nuxt-calendly/compare/v0.1.18...v0.1.19)
