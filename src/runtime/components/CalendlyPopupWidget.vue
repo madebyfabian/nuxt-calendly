@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { computed, ref } from "vue"
+  import { ref, computed, defineProps, defineEmits, defineExpose } from "vue"
   import type { CalendlyPopupWidgetOptions } from "../types"
   import PopupModal from "./PopupModal.vue"
 
@@ -44,6 +44,10 @@
   }>()
 
   const isOpen = ref<boolean>(false)
+
+  defineExpose({
+    isOpen,
+  })
 
   const onClick = (e: Event) => {
     e.preventDefault()
