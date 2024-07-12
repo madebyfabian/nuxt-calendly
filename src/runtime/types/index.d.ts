@@ -163,11 +163,23 @@ export type ProfilePageViewedEvent = MessageEvent<{
   payload: {}
 }>
 
+export type PageHeightResizeEvent = MessageEvent<{
+  event: CalendlyEvent.PAGE_HEIGHT;
+  payload: {
+    /**
+       * @description The height of the Calendly scheduling page in pixels.
+       * @example 1200px
+    */
+    height: string;
+  };
+}>;
+
 export type CalendlyEventHandlers = {
   onDateAndTimeSelected?: (e: DateAndTimeSelectedEvent) => any
   onEventScheduled?: (e: EventScheduledEvent) => any
   onEventTypeViewed?: (e: EventTypeViewedEvent) => any
   onProfilePageViewed?: (e: ProfilePageViewedEvent) => any
+  onPageHeightResize?: (e: PageHeightResizeEvent) => any;
 }
 
 // --- custom ---
