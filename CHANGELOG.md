@@ -4,6 +4,10 @@
 
 [compare changes](https://github.com/madebyfabian/nuxt-calendly/compare/v0.1.18...v0.1.19)
 
+### 🚀 Features
+
+- Added onPageHeightResize event to the useCalendlyEventListener hook (thanks @tcampb) ([1b7728a](https://github.com/madebyfabian/nuxt-calendly/commit/1b7728a))
+
 ### 📖 Documentation
 
 - Use new `nuxi module add` command in installation ([34dd01b](https://github.com/madebyfabian/nuxt-calendly/commit/34dd01b))
@@ -15,6 +19,7 @@
 ### ❤️ Contributors
 
 - Daniel Roe ([@danielroe](http://github.com/danielroe))
+- Tyler Campbell ([@tcampb](http://github.com/tcampb))
 
 ## v0.1.18
 
