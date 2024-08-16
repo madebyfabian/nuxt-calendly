@@ -5,6 +5,7 @@
     @click="onClick"
   >
     {{ props.text || 'Schedule time with me' }}
+    <slot />
   </button>
   <PopupModal
     v-bind="props"
