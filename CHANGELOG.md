@@ -6,11 +6,13 @@
 
 ### 🩹 Fixes
 
-- Change remaining occurrences from `className` to `class` ([babfd7a](https://github.com/madebyfabian/nuxt-calendly/commit/babfd7a))
+- Introduce `<slot />` to PopupButton for increased flexibility, thanks @hnstbldr
+- Change remaining occurrences from `className` to `class`, thanks @hnstbldr ([babfd7a](https://github.com/madebyfabian/nuxt-calendly/commit/babfd7a))
 
 ### ❤️ Contributors
 
 - Madebyfabian <hello@madebyfabian.com>
+- @hnstbldr
 
 ## v0.1.20
 
