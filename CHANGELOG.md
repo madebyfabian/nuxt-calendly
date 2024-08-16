@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.1.21
+
+[compare changes](https://github.com/madebyfabian/nuxt-calendly/compare/v0.1.20...v0.1.21)
+
+### 🩹 Fixes
+
+- Change remaining occurrences from `className` to `class` ([babfd7a](https://github.com/madebyfabian/nuxt-calendly/commit/babfd7a))
+
+### ❤️ Contributors
+
+- Madebyfabian <hello@madebyfabian.com>
+
 ## v0.1.20
 
 [compare changes](https://github.com/madebyfabian/nuxt-calendly/compare/v0.1.19...v0.1.20)
