@@ -1,11 +1,11 @@
 <template>
   <!-- prettier-ignore -->
   <div
-    className="calendly-badge-widget"
+    class="calendly-badge-widget"
     @click="onClick"
   >
     <div
-      className="calendly-badge-content"
+      class="calendly-badge-content"
       :style="style"
     >
       {{ props.text || "Schedule time with me" }}
