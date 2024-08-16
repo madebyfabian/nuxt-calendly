@@ -12,13 +12,13 @@
         class="calendly-close-overlay"
         @click="e => emit('close', e)"
       />
-      <div className="calendly-popup">
-        <div className="calendly-popup-content">
+      <div class="calendly-popup">
+        <div class="calendly-popup-content">
           <PopupModalContent v-bind="childProps" />
         </div>
       </div>
       <button
-        className="calendly-popup-close"
+        class="calendly-popup-close"
         aria-label="Close modal"
         style="display: block; border: none; padding: 0;"
         @click="e => emit('close', e)"

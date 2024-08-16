@@ -1,7 +1,7 @@
 <template>
-  <div className="calendly-spinner">
-    <div className="calendly-bounce1" />
-    <div className="calendly-bounce2" />
-    <div className="calendly-bounce3" />
+  <div class="calendly-spinner">
+    <div class="calendly-bounce1" />
+    <div class="calendly-bounce2" />
+    <div class="calendly-bounce3" />
   </div>
 </template>
